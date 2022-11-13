@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Node from "./Node/Node.jsx";
-import {showPopUp} from "./Tutorial/Tutorial.jsx";
+import { showPopUp } from "./Tutorial/Tutorial.jsx";
 
 import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
 
