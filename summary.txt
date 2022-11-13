@@ -1,0 +1,58 @@
+Did this in just 4 files 
+
+#  Tutorial component:
+   
+   - It is the very first component renderd when site is   
+     clicked 
+   - It is a simple popup which gives the brief information  
+     about the symbols used  
+
+#  Node component :
+ 
+   - The simplest component all that it is use to render the 
+     node and decide what should be filled inside these node and helps in identifing the type of node 
+
+   - Each node have some properites like 
+	     isStart 
+	     isFinish
+	     isWall 
+	     isWeight 
+   - These properties can be handled using three mouse 
+     handlers 
+	     onMouseDown
+	     onMouseEnter
+	     onMouseUp
+   - In these different functions are called for wall and    
+     weigth
+
+#   pfv   :
+   
+   - The position of start and end node can be changed 
+     using controllers present at the top this is handled using pointChangeHandler function 
+   - To change weight there is weightChangeHandler 
+     function 
+   - To avoid changing nodes while algo is running and after completion I 
+     have used topMessage string that tells the current state that wether algo is not yet started or running or finised
+
+#    Dijkstra :
+   -  it is the algo used to find the shortest path in weighted graph.
+   -  the grid can be considered as a connected graph where every node sharing
+      edge are connected except the wall.
+   -  the weight on the node indicated the weight of the path.
+   -  it is the greedy algoritm 
+       * this component exports two array one to visulize the algo how we are 
+         going to adjcant node and the other to renders the shortest path.
+       * the all node have distace INF except the start node then.
+       * the we select the closest node and push this node to the 
+         visulizeNodeInOrder find the distance between this   
+         node and all the child except the visited one if it can be minimized we minimze it and put the value of node into the previesNode variable it form ans linkedlinklist which is use to retrace the shortest path.
+       * now from all the remaining node we find the closest node if its INF
+         then we cant reach the finish point if its finish point the we return the two arrays.
+   -   these two array are passed to animate dijkstra function this will iterate to
+       all the nodesVisited in algo and create the effect when it reaches the lastNode an another function is called to display the shortestPath this will iterate to all the nodes in shortest path array and create this effect.
+       
+
+      
+
+
+
