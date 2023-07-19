@@ -1,3 +1,48 @@
+you are given a graph that has some source node and a diestination node.
+path is defined as the sum of the weight of edges traversed to reach the 
+end node. The diskstra algo garentees the minimum path.
+
+
+- picks the unvisited vertex with the lowest distance, (mark this visited)
+- calculates the distance through it to each unvisited neighbor, 
+  and updates the neighbor's distance if smaller. 
+- and repeat this until we visited all nodes.
+- this algorithm works as we always move to a new node by choicing the 
+  minimum path.
+
+
+https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/
+
+we have an distace array that represents the min distance to reach this
+node from source node. Initially this have infinite value.
+distace of start node will be zero.
+we start our traversal from start node and maintain the current distane.
+we move to all its neighboring
+nodes and now the ditance to reach this node can be represented as
+sum of weight from 
+
+
+challenges
+- how to retrace the path 
+- learned about the algorithm 
+- how to speed up the algorithm 
+
+
+
+
+
+story of why i created this?
+The first day of my college one of my senior was taking a 
+session and he asked what is the algorithm used in google maps to exisimate the quickest path to reach the destination considering the traffic.
+
+how i created?
+
+
+Major obstacles and how i handled it?
+
+
+
+
 Did this in just 4 files 
 
 #  Tutorial component:
@@ -53,6 +98,28 @@ Did this in just 4 files
        
 
       
+A pathfinding visualizer using Dijkstra's algorithm is a tool that allows users to visualize how Dijkstra's algorithm works to find the shortest path between two points on a graph.
 
+Dijkstra's algorithm is a graph search algorithm that works by starting at the initial node and then iteratively visiting the neighboring nodes that are closest to the starting node. It maintains a list of the shortest known distances from the starting node to all other nodes, and it updates this list as it visits each node.
+
+A pathfinding visualizer using Dijkstra's algorithm typically allows users to specify the starting and ending nodes on the graph, and then displays the shortest path between them. As the algorithm runs, the nodes that have been visited are typically highlighted, and the distance and path from the starting node to each node is displayed.
+
+This type of visualizer can be useful for understanding how Dijkstra's algorithm works, and for testing and debugging algorithms on different types of graphs or networks. It can also be used in practical applications such as finding the shortest path between two points in a transportation network or road system.
+
+
+
+
+
+
+
+
+
+
+Created a reliable backend architecture using Node.js, Express.js, and MongoDB to drive our client's ecommerce website.
+
+Added security by constructing authentication system that allows users to establish an account and reset their password via email.
+
+
+learned to use postman for api testing. 
 
 

@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# PathFinding-Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This path-finding visualizer uses the Dijkstra's algorithm to find the shortest path between a source and destination node. Users can customize the paths by choosing the start and end nodes, and they can also add blocks or weights to nodes, influencing the optimal route.
 
-## Available Scripts
+# Dijkstra's algorithm
 
-In the project directory, you can run:
+<!-- - Picks the unvisited vertex with the lowest distance.
+- calculates the distance through it to each unvisited neighbor,
+  and updates the neighbor's distance if smaller and repeat this until we visited all nodes. -->
 
-### `npm start`
+Dijkstra's Algorithm analyzes the graph to find the shortest path between that node and all the other nodes in the graph.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The algorithm keeps track of the currently known shortest distance from each node to the source node and it updates these values if it finds a shorter path.
+- Once the algorithm has found the shortest path between the source node and another node, that node is marked as "visited" and added to the path.
+- The process continues until all the nodes in the graph have been added to the path. This way, we have a path that connects the source node to all other nodes following the shortest path possible to reach each node.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The reason Dijkstra's algorithm works and guarantees the shortest path is due to its greedy nature. It always explores the node with the minimum distance first and updates the distance to its neighbors if a shorter path is found. Since the algorithm explores nodes in order of increasing distance, it ensures that the shortest distance to each node is found before exploring longer paths.
 
-### `npm test`
+## Tech Stack Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ReactJs
 
-### `npm run build`
+1. Virtual DOM: Virtual DOM: ReactJS utilizes a virtual DOM (Document Object Model) to efficiently update and render user interfaces. By maintaining a lightweight representation of the actual DOM in memory, React can perform efficient updates and minimize unnecessary re-renders. This results in improved performance and a smoother user experience.
+2. Rich Ecosystem and Community Support: ReactJS has a vibrant and active community with extensive resources, libraries, and tools available. This ecosystem provides a wide range of solutions for common development challenges.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Cloudflare
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Hosted front end on Cloudflare. It offers certain advantages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Content Delivery Network (CDN):A CDN is a geographically distributed group of servers that caches content close to end users this improves visitors experience faster page loading times.
+2. Easy Deployment and Continuous Integration: Cloudflare Pages offers seamless integration with popular version control systems such as GitHub. This allows for easy deployment of frontend updates through automated pipelines, ensuring a smooth and efficient development workflow.
+3. Cost-effective Solution: Cloudflare Pages offers a generous free tier for hosting static websites and provides cost-effective pricing plans for higher traffic volumes.
 
-### `npm run eject`
+## Screenshots
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="./screenshots/Tutorial.png" height="600">
+<img src="./screenshots/first.png" height="600">
+<img src="./screenshots/blocked.png" height="600">
+<img src="./screenshots/weight.png" height="600">
+<img src="./screenshots/path.png" height="600">
